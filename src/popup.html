@@ -2,7 +2,7 @@
 <html>
   <head>
     <style>
-    body {
+    body #settings {
       display: inline-block;
       overflow: visible;
       margin: 0px;
@@ -14,10 +14,16 @@
     <script src="popup.js"></script>
   </head>
   <body>
-    <div id="date_aquired" style="font-size: 10pt"></div>
+    <h3>Token</h3>
     <input type="text" id="token">
-    <br>
-    <div id="msg" style="font-size: 10pt">Token copied to clipboard!</div>
-    <input id="copy" type="button" value="Copy" style="display: none">
+    <div id="date_acquired" style="font-size: 10pt"></div><br/>
+    <div id="msg" style="font-size: 10pt">(token copied to clipboard when extension is opened)</div>
+    <div id="settings">
+      <h3>Settings</h3>
+      <input type="checkbox" id="omitBearer">
+      <label>Omit "Bearer " prefix from token</label>
+      <br/>
+      (re-open the extension popup to apply)
+    </div>
   </body>
 </html>

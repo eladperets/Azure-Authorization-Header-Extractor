@@ -1,17 +1,24 @@
 {
   "name": "Azure Authorization Header Extractor",
   "description": "Extracts Azure authorization header from requests",
-  "version": "1.3",
+  "version": "1.5",
   "permissions": [
-    "tabs", "clipboardWrite", "storage" ,"webRequest", "https://*.portal.azure.com/*", "https://management.azure.com/*"
+    "clipboardWrite",
+    "storage",
+    "webRequest"
   ],
-  "browser_action": {
-      "default_title": "Show header",
-      "default_icon": "icon.png",
-      "default_popup": "popup.html"
+  "host_permissions": [
+    "https://*.portal.azure.com/*",
+    "https://management.azure.com/*",
+    "https://*.management.azure.com/*"
+  ],
+  "action": {
+    "default_title": "Show header",
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
   },
-    "background": {
-    "scripts": ["background.js"]
+  "background": {
+    "service_worker": "background.js"
   },
-  "manifest_version": 2
+  "manifest_version": 3
 }

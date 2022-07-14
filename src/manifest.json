@@ -1,7 +1,7 @@
 {
   "name": "Azure Authorization Header Extractor",
   "description": "Extracts Azure authorization header from requests",
-  "version": "1.5",
+  "version": "1.6",
   "permissions": [
     "clipboardWrite",
     "storage",

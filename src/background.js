@@ -16,7 +16,7 @@ chrome.webRequest.onSendHeaders.addListener(
       "https://*.portal.azure.com/*",
       "https://management.azure.com/*",
       "https://*.management.azure.com/*",
-
+      "https://management.core.windows.net/*",
     ]
   },
   ["requestHeaders"]);
